@@ -3,68 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cute Game Project 🐾</title>
-    <!-- นำเข้าฟอนต์ Kanit จาก Google Fonts ให้อ่านง่ายและดูน่ารัก -->
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>My Cute Games Hub 🐾</title>
+    <!-- นำเข้าฟอนต์ Kanit จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            /* สีพื้นหลังชมพูพาสเทล */
+            /* สีพื้นหลังชมพูพาสเทล ลายจุด */
             background-color: #fff0f5; 
+            background-image: radial-gradient(#ffc0cb 2px, transparent 2px);
+            background-size: 30px 30px;
             font-family: 'Kanit', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            text-align: center;
-            /* เพิ่มลวดลายพื้นหลังเป็นจุดน่ารักๆ */
-            background-image: radial-gradient(#ffc0cb 2px, transparent 2px);
-            background-size: 30px 30px;
+            padding: 40px 20px;
+            color: #555;
         }
-        .container {
-            background-color: white;
-            padding: 50px 40px;
+        .main-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
             border-radius: 30px;
-            /* เงาสีชมพูอ่อนๆ ให้กล่องดูลอยขึ้นมา */
-            box-shadow: 0 15px 25px rgba(255, 182, 193, 0.6); 
-            /* กรอบเส้นประสีชมพู */
+            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4); 
             border: 4px dashed #ffb6c1; 
-            max-width: 500px;
-            width: 90%;
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
         }
         h1 {
-            color: #ff69b4; /* สีตัวหนังสือชมพูเข้ม */
-            margin-bottom: 10px;
+            color: #ff69b4;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
         }
-        p {
-            color: #666;
+        .subtitle {
             font-size: 1.2rem;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            color: #777;
         }
-        .pets {
-            font-size: 5rem;
+        .pets-header {
+            font-size: 4rem;
             margin-bottom: 10px;
-            /* ทำให้ตัวอีโมจิขยับดุ๊กดิ๊ก */
             animation: bounce 2s infinite; 
+            display: inline-block;
         }
+
+        /* การจัดการจัดวางแบบ Grid สำหรับการ์ดเกม */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 10px;
+        }
+
+        /* สไตล์ของการ์ดแต่ละใบ */
+        .game-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+        }
+
+        .game-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+        .game-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .game-desc {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        /* ปุ่มกดเล่นเกม */
         .btn {
             display: inline-block;
-            padding: 15px 35px;
-            background-color: #87cefa; /* สีปุ่มฟ้าพาสเทล */
+            padding: 12px 25px;
             color: white;
             text-decoration: none;
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             border-radius: 50px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(135, 206, 250, 0.5);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 80%;
         }
         .btn:hover {
-            /* เอฟเฟกต์ตอนเอาเมาส์ชี้ปุ่ม */
-            transform: translateY(-5px) scale(1.05);
-            background-color: #00bfff; 
-            box-shadow: 0 10px 20px rgba(135, 206, 250, 0.6);
+            transform: scale(1.05);
+            filter: brightness(1.1);
         }
+
+        /* ตั้งค่าสีให้แต่ละการ์ดดูหลากหลายและพาสเทล */
+        /* Game 21 - ฟ้า */
+        .card-21 { border-color: #e0f2fe; background-color: #f0f9ff; }
+        .card-21 .game-title { color: #0284c7; }
+        .card-21 .btn { background-color: #38bdf8; box-shadow: 0 4px 10px rgba(56, 189, 248, 0.4); }
+
+        /* Game 22 - เขียวมินต์ */
+        .card-22 { border-color: #dcfce7; background-color: #f0fdf4; }
+        .card-22 .game-title { color: #16a34a; }
+        .card-22 .btn { background-color: #4ade80; box-shadow: 0 4px 10px rgba(74, 222, 128, 0.4); }
+
+        /* Game 31 - เหลือง/ส้มพีช */
+        .card-31 { border-color: #fef08a; background-color: #fefce8; }
+        .card-31 .game-title { color: #d97706; }
+        .card-31 .btn { background-color: #fbbf24; box-shadow: 0 4px 10px rgba(251, 191, 36, 0.4); }
+
+        /* Game 41 - ม่วงพาสเทล */
+        .card-41 { border-color: #f3e8ff; background-color: #faf5ff; }
+        .card-41 .game-title { color: #9333ea; }
+        .card-41 .btn { background-color: #c084fc; box-shadow: 0 4px 10px rgba(192, 132, 252, 0.4); }
+
+        /* Game 51 - โอรส/ชมพูพีช */
+        .card-51 { border-color: #ffedd5; background-color: #fff7ed; }
+        .card-51 .game-title { color: #ea580c; }
+        .card-51 .btn { background-color: #fb923c; box-shadow: 0 4px 10px rgba(251, 146, 60, 0.4); }
 
         /* อนิเมชันขยับดุ๊กดิ๊ก */
         @keyframes bounce {
@@ -76,15 +143,57 @@
 </head>
 <body>
 
-    <div class="container">
-        <!-- แก๊งน้องหมาน้องแมว -->
-        <div class="pets">🐶💖🐱</div>
+    <div class="main-container">
+        <!-- แก๊งน้องหมาน้องแมวต้อนรับ -->
+        <div class="pets-header">🐶💖🐱</div>
         
-        <h1>ยินดีต้อนรับเข้าสู่เกมของเรา!</h1>
-        <p>เตรียมตัวพบกับความน่ารักใจฟู ที่จะมาช่วยฮีลใจคุณ 🐾✨</p>
+        <h1>Welcome to Pets Game Hub!</h1>
+        <p class="subtitle">เลือกมินิเกมสุดน่ารักที่คุณอยากเล่นได้เลย 🐾✨</p>
         
-        <!-- ลิงก์ไปยังไฟล์เกมที่อยู่ในโฟลเดอร์ game21 -->
-        <a href="game21/game21.html" class="btn">🎮 กดเล่น Game 21 ตรงนี้เลย! 🐾</a>
+        <!-- พื้นที่ Grid สำหรับใส่การ์ดเกม -->
+        <div class="games-grid">
+            
+            <!-- Game 21 -->
+            <div class="game-card card-21">
+                <div class="game-icon">🦴</div>
+                <div class="game-title">Game 21</div>
+                <div class="game-desc">เกมน้องหมาสุดซ่า (พร้อมให้เล่นแล้ว!)</div>
+                <a href="game21/game21.html" class="btn">▶ เล่นเลย</a>
+            </div>
+
+            <!-- Game 22 -->
+            <div class="game-card card-22">
+                <div class="game-icon">🧶</div>
+                <div class="game-title">Game 22</div>
+                <div class="game-desc">เกมน้องแมวตะปบไหมพรม (เร็วๆ นี้)</div>
+                <a href="game22/game22.html" class="btn">▶ เล่นเลย</a>
+            </div>
+
+            <!-- Game 31 -->
+            <div class="game-card card-31">
+                <div class="game-icon">🐟</div>
+                <div class="game-title">Game 31</div>
+                <div class="game-desc">ภารกิจตามล่าปลาทู (เร็วๆ นี้)</div>
+                <a href="game31/game31.html" class="btn">▶ เล่นเลย</a>
+            </div>
+
+            <!-- Game 41 -->
+            <div class="game-card card-41">
+                <div class="game-icon">🐾</div>
+                <div class="game-title">Game 41</div>
+                <div class="game-desc">ผจญภัยรอยเท้าปริศนา (เร็วๆ นี้)</div>
+                <a href="game41/game41.html" class="btn">▶ เล่นเลย</a>
+            </div>
+
+            <!-- Game 51 -->
+            <div class="game-card card-51">
+                <div class="game-icon">🍖</div>
+                <div class="game-title">Game 51</div>
+                <div class="game-desc">ปาร์ตี้ของว่างแสนอร่อย (เร็วๆ นี้)</div>
+                <a href="game51/game51.html" class="btn">▶ เล่นเลย</a>
+            </div>
+
+        </div>
     </div>
 
 </body>
