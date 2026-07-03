@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cute Game Project 🐾</title>
+    <!-- นำเข้าฟอนต์ Kanit จาก Google Fonts ให้อ่านง่ายและดูน่ารัก -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* สีพื้นหลังชมพูพาสเทล */
+            background-color: #fff0f5; 
+            font-family: 'Kanit', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            /* เพิ่มลวดลายพื้นหลังเป็นจุดน่ารักๆ */
+            background-image: radial-gradient(#ffc0cb 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        .container {
+            background-color: white;
+            padding: 50px 40px;
+            border-radius: 30px;
+            /* เงาสีชมพูอ่อนๆ ให้กล่องดูลอยขึ้นมา */
+            box-shadow: 0 15px 25px rgba(255, 182, 193, 0.6); 
+            /* กรอบเส้นประสีชมพู */
+            border: 4px dashed #ffb6c1; 
+            max-width: 500px;
+            width: 90%;
+        }
+        h1 {
+            color: #ff69b4; /* สีตัวหนังสือชมพูเข้ม */
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .pets {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            /* ทำให้ตัวอีโมจิขยับดุ๊กดิ๊ก */
+            animation: bounce 2s infinite; 
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #87cefa; /* สีปุ่มฟ้าพาสเทล */
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(135, 206, 250, 0.5);
+        }
+        .btn:hover {
+            /* เอฟเฟกต์ตอนเอาเมาส์ชี้ปุ่ม */
+            transform: translateY(-5px) scale(1.05);
+            background-color: #00bfff; 
+            box-shadow: 0 10px 20px rgba(135, 206, 250, 0.6);
+        }
 
+        /* อนิเมชันขยับดุ๊กดิ๊ก */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- แก๊งน้องหมาน้องแมว -->
+        <div class="pets">🐶💖🐱</div>
+        
+        <h1>ยินดีต้อนรับเข้าสู่เกมของเรา!</h1>
+        <p>เตรียมตัวพบกับความน่ารักใจฟู ที่จะมาช่วยฮีลใจคุณ 🐾✨</p>
+        
+        <!-- ลิงก์ไปยังไฟล์เกมที่อยู่ในโฟลเดอร์ game21 -->
+        <a href="game21/game21.html" class="btn">🎮 กดเล่น Game 21 ตรงนี้เลย! 🐾</a>
+    </div>
+
+</body>
+</html>
