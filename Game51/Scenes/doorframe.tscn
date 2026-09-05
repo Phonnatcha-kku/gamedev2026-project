@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://h6utxbvynjjr"]
+
+[ext_resource type="PackedScene" uid="uid://do214snarpidp" path="res://Assets/Models/Wood Frame Base Build Set (Modular) Part 2.undefined-glb/Wood Doorway 2.glb" id="1_yxc3v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htemk"]
+size = Vector3(1.9005127, 2.0078125, 0.24053955)
+
+[node name="Doorframe" unique_id=1620935933 instance=ExtResource("1_yxc3v")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/WoodDoor2" parent_id_path=PackedInt32Array(1689426918) index="0" unique_id=979128528]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/WoodDoor2/StaticBody3D" index="0" unique_id=1542278222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018615723, 0.953125, -0.0317688)
+shape = SubResource("BoxShape3D_htemk")

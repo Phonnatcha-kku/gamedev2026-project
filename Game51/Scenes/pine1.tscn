@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dlkyg4w02h4j3"]
+
+[ext_resource type="PackedScene" uid="uid://bh5tm4vefkrvx" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Pine-rfnxJv0Rqa.glb" id="1_0wu57"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qirgc"]
+size = Vector3(0.60317993, 6.9250183, 0.50283813)
+
+[node name="Pine" unique_id=80105784 instance=ExtResource("1_0wu57")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/Pine_1" parent_id_path=PackedInt32Array(1571891903) index="0" unique_id=2079082138]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/Pine_1/StaticBody3D" index="0" unique_id=344007661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020004272, 3.261551, -0.030105585)
+shape = SubResource("BoxShape3D_qirgc")

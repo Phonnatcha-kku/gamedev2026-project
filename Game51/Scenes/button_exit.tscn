@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://puc4l62gx6et"]
+
+[ext_resource type="FontFile" uid="uid://doli4f4qtgp63" path="res://Assets/Fonts/kirifont/KiriFont.ttf" id="1_4hc3j"]
+[ext_resource type="Shortcut" uid="uid://bkpwoj8fplbxr" path="res://Scenes/Prefabs/esc_shortcut.tres" id="1_t4y7r"]
+[ext_resource type="Script" uid="uid://b0ufvbwfu0xsb" path="res://Scenes/Prefabs/button_exit.gd" id="2_cooxc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14cdr"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4lci"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj0hq"]
+bg_color = Color(1, 1, 1, 0.7647059)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[node name="btnExit" type="Button" unique_id=1633606001]
+offset_left = 42.0
+offset_top = 34.0
+offset_right = 168.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_4hc3j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_14cdr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q4lci")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pj0hq")
+shortcut = ExtResource("1_t4y7r")
+text = "Back"
+script = ExtResource("2_cooxc")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

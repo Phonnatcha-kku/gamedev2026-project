@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cphelpkhxnbs3"]
+
+[ext_resource type="Script" uid="uid://beck0wfdhcmv1" path="res://nextleveldoor.gd" id="1_jhxa6"]
+[ext_resource type="PackedScene" uid="uid://dytlous3kp4ve" path="res://Scenes/Level_02.tscn" id="2_w0005"]
+[ext_resource type="PackedScene" uid="uid://h6utxbvynjjr" path="res://Scenes/doorframe.tscn" id="3_y4e0w"]
+[ext_resource type="PackedScene" uid="uid://dvcbrhpblo0hp" path="res://Scenes/fence.tscn" id="4_nyrr2"]
+[ext_resource type="PackedScene" uid="uid://crf475j3vpxfc" path="res://Scenes/roof.tscn" id="5_vbsv2"]
+[ext_resource type="PackedScene" uid="uid://dxi4yqv2u1jbj" path="res://Scenes/woodfloor.tscn" id="6_jgsr4"]
+[ext_resource type="PackedScene" uid="uid://d1lix265ndal4" path="res://Scenes/window.tscn" id="7_235is"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htemk"]
+size = Vector3(2.800846, 2.7949219, 0.29992676)
+
+[node name="Nextleveldoor" type="Area3D" unique_id=900016402]
+script = ExtResource("1_jhxa6")
+next_scene = ExtResource("2_w0005")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1824311221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10143471, 1.3974609, -1.5475974)
+shape = SubResource("BoxShape3D_htemk")
+
+[node name="Doorframe" parent="." unique_id=1620935933 instance=ExtResource("3_y4e0w")]
+transform = Transform3D(-1.4996525, 0, 0.032287594, 0, 1.5, 0, -0.032287594, 0, -1.4996525, 0, 0.14598536, -1.5174294)
+
+[node name="Fence" parent="." unique_id=1824585786 instance=ExtResource("4_nyrr2")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.015459895, 1.3684423)
+
+[node name="roof" parent="." unique_id=282771116 instance=ExtResource("5_vbsv2")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 2.9571137, 0)
+
+[node name="woodfloor" parent="." unique_id=723475679 instance=ExtResource("6_jgsr4")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="window" parent="." unique_id=1544857871 instance=ExtResource("7_235is")]
+transform = Transform3D(0.049278803, 0, -1.4991903, 0, 1.5, 0, 1.4991903, 0, 0.049278803, -1.2649591, 0, 0)
+
+[node name="window2" parent="." unique_id=1464918008 instance=ExtResource("7_235is")]
+transform = Transform3D(0.04323634, 0, 1.4993768, 0, 1.5, 0, -1.4993768, 0, 0.04323634, 1.4343691, 0, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

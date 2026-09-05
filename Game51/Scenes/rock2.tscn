@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://v5ecp7eex4xr"]
+
+[ext_resource type="PackedScene" uid="uid://df2yivh7uyqox" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Pebble Square-l5XiYQj1oD.glb" id="1_qnycn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x7q7x"]
+size = Vector3(0.4188806, 0.13435745, 0.21928516)
+
+[node name="Rock" unique_id=903812558 instance=ExtResource("1_qnycn")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/Pebble_Square_6" parent_id_path=PackedInt32Array(1829881586) index="0" unique_id=1418949178]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/Pebble_Square_6/StaticBody3D" index="0" unique_id=743359560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03128235, 0.059896473, 0.020333996)
+shape = SubResource("BoxShape3D_x7q7x")

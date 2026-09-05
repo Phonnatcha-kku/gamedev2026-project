@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dnfutmw7q037r"]
+
+[ext_resource type="PackedScene" uid="uid://bgok8amws8630" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Bush with Flowers.glb" id="1_3rcki"]
+
+[node name="Bush_flower" unique_id=1497631530 instance=ExtResource("1_3rcki")]

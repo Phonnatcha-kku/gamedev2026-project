@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b7uelidwmcm65"]
+
+[ext_resource type="PackedScene" uid="uid://dndp2f4nhrdch" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Plant Big.glb" id="1_if65l"]
+
+[node name="Flower_Violet" unique_id=455220763 instance=ExtResource("1_if65l")]

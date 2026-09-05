@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4mgmjr88gt7f"]
+
+[ext_resource type="PackedScene" uid="uid://cf7dfmnqy4p73" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Tree-QVOop92WmG.glb" id="1_gtca3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htemk"]
+size = Vector3(0.8696594, 6.4743958, 0.9067383)
+
+[node name="Tree1" unique_id=1274571869 instance=ExtResource("1_gtca3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/CommonTree_3" parent_id_path=PackedInt32Array(718384826) index="0" unique_id=32068312]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/CommonTree_3/StaticBody3D" index="0" unique_id=1375672724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007675171, 3.0201874, 0.04663086)
+shape = SubResource("BoxShape3D_htemk")

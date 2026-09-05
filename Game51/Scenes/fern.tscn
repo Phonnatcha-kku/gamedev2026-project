@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bjqwl8ng3rnnj"]
+
+[ext_resource type="PackedScene" uid="uid://dwl6y1s4ewhji" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Fern.glb" id="1_bxmca"]
+
+[node name="Fern" unique_id=2137111995 instance=ExtResource("1_bxmca")]

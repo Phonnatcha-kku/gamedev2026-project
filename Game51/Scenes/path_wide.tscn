@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c5d0j041jdn3p"]
+
+[ext_resource type="PackedScene" uid="uid://bxj37p2epiif5" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Rock Path Round Wide.glb" id="1_xyfcp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixe6m"]
+size = Vector3(2.0445557, 0.11206055, 2.0848389)
+
+[node name="Path_wide" unique_id=1808420996 instance=ExtResource("1_xyfcp")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/RockPath_Round_Wide" parent_id_path=PackedInt32Array(1592843311) index="0" unique_id=355156619]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/RockPath_Round_Wide/StaticBody3D" index="0" unique_id=545263998]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0079956055, 0.039916992, -0.08404542)
+shape = SubResource("BoxShape3D_ixe6m")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://rmx5buxihr05"]
+
+[ext_resource type="PackedScene" uid="uid://dtgxmekn8bvjf" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Rock Medium-JQxF95498B.glb" id="1_rono7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sdnda"]
+size = Vector3(3.371582, 1.9712067, 3.2783813)
+
+[node name="Rock_M1" unique_id=73035218 instance=ExtResource("1_rono7")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/Rock_Medium_3" parent_id_path=PackedInt32Array(1687418776) index="0" unique_id=1814089664]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/Rock_Medium_3/StaticBody3D" index="0" unique_id=1495881359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.084228516, 0.92533106, 0.8548279)
+shape = SubResource("BoxShape3D_sdnda")
