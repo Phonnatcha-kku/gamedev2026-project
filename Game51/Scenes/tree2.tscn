@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bwxt0ur6jodxr"]
 
-[ext_resource type="PackedScene" uid="uid://cdng4nx7n510w" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Tree-qZtx0AHhcy.glb" id="1_qi8gg"]
+[ext_resource type="PackedScene" uid="uid://25etv4bjwssy" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Tree-qZtx0AHhcy.glb" id="1_qi8gg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gsre4"]
 size = Vector3(0.8696594, 6.4743958, 1.1105957)

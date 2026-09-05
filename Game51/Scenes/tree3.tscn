@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://btyqaxnh4bmyf"]
 
-[ext_resource type="PackedScene" uid="uid://dgl4b14mevodq" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Tree-t9KbsfYdXz.glb" id="1_th4ll"]
+[ext_resource type="PackedScene" uid="uid://c157o8dlq87f4" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Tree-t9KbsfYdXz.glb" id="1_th4ll"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcmrf"]
 size = Vector3(1, 5.4212646, 1.1293945)
 
 [node name="Tree" unique_id=926040677 instance=ExtResource("1_th4ll")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/CommonTree_5" parent_id_path=PackedInt32Array(624432280) index="0" unique_id=726829714]
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/CommonTree_5" parent_id_path=PackedInt32Array(453971522) index="0" unique_id=726829714]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/CommonTree_5/StaticBody3D" index="0" unique_id=118683141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4889526, -0.064697266)

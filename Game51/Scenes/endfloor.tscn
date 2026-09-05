@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://dh4ediqkvh2tv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5ix1"]
-albedo_color = Color(0.71051306, 0.5889473, 0.4554357, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0lkhr"]
+albedo_color = Color(0.77254903, 0.6156863, 0.50980395, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_htemk"]
-material = SubResource("StandardMaterial3D_c5ix1")
-size = Vector3(16.210938, 1, 16.083496)
+[sub_resource type="BoxMesh" id="BoxMesh_c5ix1"]
+material = SubResource("StandardMaterial3D_0lkhr")
+size = Vector3(16, 1, 15.838745)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v6ygx"]
-size = Vector3(16.232483, 1, 15.983887)
+size = Vector3(16.046875, 1, 15.8688965)
 
-[node name="Endfloor" type="MeshInstance3D" unique_id=814748723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.058929443, 0, -0.04272461)
-mesh = SubResource("BoxMesh_htemk")
+[node name="endfloor" type="MeshInstance3D" unique_id=1988924002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.1035156e-05)
+mesh = SubResource("BoxMesh_c5ix1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=771940328]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=8559427]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=573560280]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.060638428, 0, -0.020751953)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=945110074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0078125, 0, 0.06774902)
 shape = SubResource("BoxShape3D_v6ygx")

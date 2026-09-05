@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://0t0qb3qjq6my"]
+[gd_scene format=3 uid="uid://0t0qb3qjq6my"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2simu"]
 resource_name = "Material1"

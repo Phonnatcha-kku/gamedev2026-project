@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7omd88h3vqqo"
+uid="uid://b5kdb1gyqrbu2"
 path.s3tc="res://.godot/imported/Pine-Zt62gceKXZ_Bark_NormalTree_Normal.png-4e119683ca134a228bcb17ac77dd4f95.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Pine-Zt62gceKXZ_Bark_NormalTree_Normal.png"
+roughness/src_normal="res://Assets/Models/gobot/Stylized Nature MegaKit.undefined-glb/Pine-Zt62gceKXZ_Bark_NormalTree_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
