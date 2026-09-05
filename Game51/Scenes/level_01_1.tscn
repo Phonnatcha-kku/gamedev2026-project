@@ -472,6 +472,7 @@ environment = SubResource("Environment_2lgm4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=968358511]
 transform = Transform3D(-0.898603, 0.438763, 2.98254e-08, 0.146657, 0.300359, 0.942484, 0.413527, 0.846919, -0.334251, 9.04457, 6.63937, -28.4749)
+light_energy = 0.5
 shadow_enabled = true
 
 [node name="Extras" type="Node3D" parent="." unique_id=506344263]
