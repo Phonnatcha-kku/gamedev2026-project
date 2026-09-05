@@ -23,9 +23,21 @@
 [ext_resource type="Texture2D" uid="uid://cnbbny7qjh2xn" path="res://Assets/Textures/coin.png" id="17_r3crj"]
 [ext_resource type="PackedScene" uid="uid://cf0w0skqs3k64" path="res://Scenes/player.tscn" id="18_mdsa5"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2lgm4"]
+sky_top_color = Color(0.764706, 0.764706, 0.764706, 1)
+sky_horizon_color = Color(0.764706, 0.764706, 0.764706, 1)
+sky_curve = 1.0
+ground_bottom_color = Color(0.764706, 0.764706, 0.764706, 1)
+ground_horizon_color = Color(0.764706, 0.764706, 0.764706, 1)
+ground_curve = 1.0
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_2lgm4"]
+sky_material = SubResource("ProceduralSkyMaterial_2lgm4")
+
 [sub_resource type="Environment" id="Environment_2lgm4"]
-background_mode = 1
-background_color = Color(0.764706, 0.764706, 0.764706, 1)
+background_mode = 2
+sky = SubResource("Sky_2lgm4")
 ambient_light_source = 2
 ambient_light_color = Color(0.662745, 0.694118, 0.772549, 1)
 ambient_light_energy = 1.15
@@ -472,7 +484,9 @@ environment = SubResource("Environment_2lgm4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=968358511]
 transform = Transform3D(-0.898603, 0.438763, 2.98254e-08, 0.146657, 0.300359, 0.942484, 0.413527, 0.846919, -0.334251, 9.04457, 6.63937, -28.4749)
-light_energy = 0.0
+light_energy = 0.5
+light_indirect_energy = 0.325
+light_volumetric_fog_energy = 0.556
 shadow_enabled = true
 
 [node name="Extras" type="Node3D" parent="." unique_id=506344263]
@@ -528,9 +542,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.043997, 4.800746, -18.9709
 
 [node name="Coin5" parent="Coins" unique_id=2021337941 instance=ExtResource("13_ueaxu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.081036, 5.231698, -24.506907)
-
-[node name="GameManager" type="Node3D" parent="." unique_id=1872432453]
-script = ExtResource("14_w5234")
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=686024103]
 script = ExtResource("15_atjaf")

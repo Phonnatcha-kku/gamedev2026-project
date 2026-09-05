@@ -20,9 +20,21 @@
 [ext_resource type="PackedScene" uid="uid://bjqwl8ng3rnnj" path="res://Scenes/fern.tscn" id="15_f4ju6"]
 [ext_resource type="PackedScene" uid="uid://bnjahn53opqpq" path="res://Scenes/path_small1.tscn" id="16_xbngj"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3txkn"]
+sky_top_color = Color(0.764706, 0.764706, 0.764706, 1)
+sky_horizon_color = Color(0.764706, 0.764706, 0.764706, 1)
+sky_curve = 1.0
+ground_bottom_color = Color(0.764706, 0.764706, 0.764706, 1)
+ground_horizon_color = Color(0.764706, 0.764706, 0.764706, 1)
+ground_curve = 1.0
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_3txkn"]
+sky_material = SubResource("ProceduralSkyMaterial_3txkn")
+
 [sub_resource type="Environment" id="Environment_3txkn"]
-background_mode = 1
-background_color = Color(0.764706, 0.764706, 0.764706, 1)
+background_mode = 2
+sky = SubResource("Sky_3txkn")
 ambient_light_source = 2
 ambient_light_color = Color(0.662745, 0.694118, 0.772549, 1)
 ambient_light_energy = 1.15
@@ -235,7 +247,6 @@ environment = SubResource("Environment_3txkn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=2036113100]
 transform = Transform3D(-0.898603, 0.438763, 2.98254e-08, 0.146657, 0.300359, 0.942484, 0.413527, 0.846919, -0.334251, 9.04457, 6.63937, -28.4749)
-light_energy = 0.5
 shadow_enabled = true
 
 [node name="Extras" type="Node3D" parent="." unique_id=477610567]
@@ -263,9 +274,6 @@ font = SubResource("SystemFont_kxdo2")
 font_size = 100
 outline_size = 0
 uppercase = true
-
-[node name="GameManager" type="Node3D" parent="." unique_id=1568111972]
-script = ExtResource("3_5wq6r")
 
 [node name="DeadZone" type="Area3D" parent="." unique_id=197850150]
 script = ExtResource("4_ase73")
