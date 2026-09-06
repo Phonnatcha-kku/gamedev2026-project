@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://c5v2kamub5qxm"]
-
-[ext_resource type="PackedScene" uid="uid://bkio3hi0c1ikm" path="res://Assets/Models/Stylized Nature MegaKit.undefined-glb/Grass.glb" id="1_ewrq5"]
-
-[node name="Grass" unique_id=942670465 instance=ExtResource("1_ewrq5")]

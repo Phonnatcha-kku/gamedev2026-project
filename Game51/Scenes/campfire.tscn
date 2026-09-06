@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dpqc1lw1by71o"]
 
-[ext_resource type="PackedScene" uid="uid://852pqvvnta36" path="res://Assets/Models/Small Camping Bundle-glb/Campfire.glb" id="1_kfptp"]
+[ext_resource type="PackedScene" uid="uid://bh38xmhr2fyot" path="res://Assets/Models/Small Camping Bundle-glb/Campfire.glb" id="1_kfptp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qcxes"]
-size = Vector3(1.2680664, 0.24682617, 1.3267212)
+size = Vector3(1.2680664, 0.18896484, 1.3267212)
 
 [node name="Campfire" unique_id=237764555 instance=ExtResource("1_kfptp")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Campfire_Cylinder_009" parent_id_path=PackedInt32Array(1766566561) index="0" unique_id=3901138]
+[node name="StaticBody3D" type="StaticBody3D" parent="Campfire_Cylinder_009" parent_id_path=PackedInt32Array(291915314) index="0" unique_id=3901138]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Campfire_Cylinder_009/StaticBody3D" index="0" unique_id=2043849943]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.088134766, -0.04699707, -0.017730713)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.088134766, -0.075927734, -0.017730713)
 shape = SubResource("BoxShape3D_qcxes")

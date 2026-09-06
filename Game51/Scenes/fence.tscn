@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://dvcbrhpblo0hp"]
 
-[ext_resource type="PackedScene" uid="uid://dk33jfgie2ytv" path="res://Assets/Models/Wood Frame Base Build Set (Modular) Part 2.undefined-glb/Wood Fence 1.glb" id="1_on2qe"]
+[ext_resource type="PackedScene" uid="uid://d1k3c8htqw3fy" path="res://Assets/Models/Wood Frame Base Build Set (Modular) Part 2.undefined-glb/Wood Fence 1.glb" id="1_on2qe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xuf3m"]
-size = Vector3(1.8693848, 1.939, 0.15209961)
+size = Vector3(1.8693848, 1.9113946, 0.15209961)
 
 [node name="Fence" unique_id=1824585786 instance=ExtResource("1_on2qe")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/WoodFence1" parent_id_path=PackedInt32Array(1689279945) index="0" unique_id=327047495]
+[node name="WoodFence1" parent="RootNode" parent_id_path=PackedInt32Array(385066977) index="0" unique_id=1159770189]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/WoodFence1" index="0" unique_id=327047495]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/WoodFence1/StaticBody3D" index="0" unique_id=1810183020]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0108525455, 0.995224, 0.00011035055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0108525455, 0.98142135, 0.00011035055)
 shape = SubResource("BoxShape3D_xuf3m")

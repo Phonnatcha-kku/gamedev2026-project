@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://dq6rhauw5ycej"]
 
-[ext_resource type="PackedScene" uid="uid://iannba3qcp8" path="res://Assets/Models/Small Camping Bundle-glb/Tent.glb" id="1_2jy8h"]
+[ext_resource type="PackedScene" uid="uid://byhfg5nfdcko7" path="res://Assets/Models/Small Camping Bundle-glb/Tent.glb" id="1_2jy8h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qycku"]
 size = Vector3(1.6054688, 1.1791992, 1.6054077)
 
 [node name="Tent" unique_id=81881372 instance=ExtResource("1_2jy8h")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Tent_Cube_001" parent_id_path=PackedInt32Array(1621919662) index="0" unique_id=749822513]
+[node name="Tent_Cube_001" parent="." index="0" unique_id=1307256417]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tent_Cube_001" index="0" unique_id=749822513]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Tent_Cube_001/StaticBody3D" index="0" unique_id=239452884]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390625, -0.08959961, -0.0039978027)

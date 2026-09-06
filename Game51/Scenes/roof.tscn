@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://crf475j3vpxfc"]
 
-[ext_resource type="PackedScene" uid="uid://c8x6hyh4hhkn7" path="res://Assets/Models/Wood Frame Base Build Set (Modular) Part 2.undefined-glb/Wood Floor 2.glb" id="1_gleiq"]
+[ext_resource type="PackedScene" uid="uid://bah3l0ekffhol" path="res://Assets/Models/Wood Frame Base Build Set (Modular) Part 2.undefined-glb/Wood Floor 2.glb" id="1_gleiq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0xhjo"]
 size = Vector3(1.9645996, 0.18487549, 1.987915)
 
 [node name="roof" unique_id=282771116 instance=ExtResource("1_gleiq")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/WoodFloor1" parent_id_path=PackedInt32Array(1498211473) index="0" unique_id=1413988151]
+[node name="WoodFloor1" parent="RootNode" parent_id_path=PackedInt32Array(1389787873) index="0" unique_id=1831809430]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/WoodFloor1" index="0" unique_id=1413988151]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/WoodFloor1/StaticBody3D" index="0" unique_id=156992196]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009129047, 0.07223965, 0.017545938)

@@ -3,12 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bah3l0ekffhol" path="res://Assets/Models/Wood Frame Base Build Set (Modular) Part 2.undefined-glb/Wood Floor 2.glb" id="1_wowxx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6tnwv"]
-size = Vector3(1.998291, 0.15093994, 1.96344)
+size = Vector3(1.998291, 0.15093994, 1.9651031)
 
 [node name="woodfloor" unique_id=723475679 instance=ExtResource("1_wowxx")]
 
-[node name="RootNode_WoodFloor2#StaticBody3D" type="StaticBody3D" parent="RootNode/WoodFloor1" parent_id_path=PackedInt32Array(1498211473) index="0" unique_id=1052648437]
+[node name="WoodFloor1" parent="RootNode" parent_id_path=PackedInt32Array(1389787873) index="0" unique_id=1831809430]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="RootNode_WoodFloor2#StaticBody3D" type="StaticBody3D" parent="RootNode/WoodFloor1" index="0" unique_id=1052648437]
 
 [node name="RootNode_WoodFloor2_StaticBody3D#CollisionShape3D" type="CollisionShape3D" parent="RootNode/WoodFloor1/RootNode_WoodFloor2#StaticBody3D" index="0" unique_id=116308573]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015258789, 0.08413696, 0.0105896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015258789, 0.08413696, 0.011421204)
 shape = SubResource("BoxShape3D_6tnwv")

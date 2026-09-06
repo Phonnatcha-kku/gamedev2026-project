@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cphelpkhxnbs3"]
 
-[ext_resource type="Script" uid="uid://beck0wfdhcmv1" path="res://nextleveldoor.gd" id="1_jhxa6"]
+[ext_resource type="Script" uid="uid://beck0wfdhcmv1" path="res://Scripts/nextleveldoor.gd" id="1_jhxa6"]
 [ext_resource type="PackedScene" uid="uid://h6utxbvynjjr" path="res://Scenes/doorframe.tscn" id="3_y4e0w"]
 [ext_resource type="PackedScene" uid="uid://dvcbrhpblo0hp" path="res://Scenes/fence.tscn" id="4_nyrr2"]
 [ext_resource type="PackedScene" uid="uid://crf475j3vpxfc" path="res://Scenes/roof.tscn" id="5_vbsv2"]
@@ -18,21 +18,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.073606014, 1.6701725, -1.57
 shape = SubResource("BoxShape3D_htemk")
 
 [node name="Doorframe" parent="." unique_id=1620935933 instance=ExtResource("3_y4e0w")]
-transform = Transform3D(-1.4996525, 0, 0.032287594, 0, 1.5, 0, -0.032287594, 0, -1.4996525, 0, 0.14598536, -1.5174294)
+transform = Transform3D(-0.9997683, 0, 0.021525063, 0, 1, 0, -0.021525063, 0, -0.9997683, 0, 0.14598536, -1.5174294)
 
 [node name="Fence" parent="." unique_id=1824585786 instance=ExtResource("4_nyrr2")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.015459895, 1.3684423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.015459895, 1.3684423)
 
 [node name="roof" parent="." unique_id=282771116 instance=ExtResource("5_vbsv2")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 2.9571137, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9571137, 0)
 
 [node name="woodfloor" parent="." unique_id=723475679 instance=ExtResource("6_jgsr4")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="window" parent="." unique_id=1544857871 instance=ExtResource("7_235is")]
-transform = Transform3D(0.049278803, 0, -1.4991903, 0, 1.5, 0, 1.4991903, 0, 0.049278803, -1.2649591, 0, 0)
+transform = Transform3D(0.032852534, 0, -0.9994602, 0, 1, 0, 0.9994602, 0, 0.032852534, -1.2649591, 0, 0)
 
 [node name="window2" parent="." unique_id=1464918008 instance=ExtResource("7_235is")]
-transform = Transform3D(0.04323634, 0, 1.4993768, 0, 1.5, 0, -1.4993768, 0, 0.04323634, 1.4343691, 0, 0)
+transform = Transform3D(0.028824227, 0, 0.9995845, 0, 1, 0, -0.9995845, 0, 0.028824227, 1.4343691, 0, 0)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

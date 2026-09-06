@@ -10818,7 +10818,7 @@ skin = SubResource("Skin_8erm5")
 mesh = SubResource("ArrayMesh_f1ek2")
 skin = SubResource("Skin_8erm5")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Panda" unique_id=1491958663]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Panda" unique_id=1491958663 groups=["Player"]]
 libraries/ = SubResource("AnimationLibrary_tx1dd")
 
 [node name="Gimbal" type="Node3D" parent="." unique_id=1307971685]
