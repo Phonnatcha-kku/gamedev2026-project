@@ -17,6 +17,7 @@
             background-size: 30px 30px;
             font-family: 'Kanit', sans-serif;
             display: flex;
+            flex-direction: column; /* เพิ่มทิศทางเป็นแนวตั้งเพื่อให้เครดิตอยู่ด้านล่างสวยงาม */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -108,6 +109,7 @@
         }
 
         /* ตั้งค่าสีให้แต่ละการ์ดดูหลากหลายและพาสเทล */
+        
         /* Game 21 - ฟ้า */
         .card-21 { border-color: #e0f2fe; background-color: #f0f9ff; }
         .card-21 .game-title { color: #0284c7; }
@@ -128,7 +130,7 @@
         .card-51 .game-title { color: #ea580c; }
         .card-51 .btn { background-color: #fb923c; box-shadow: 0 4px 10px rgba(251, 146, 60, 0.4); }
 
-        /* Game 61 - เหลือง/ส้มพีช (สำหรับอนาคต)*/
+        /* Game 61 - เหลือง/ส้มพีช (แก้ไขชื่อคลาสแล้ว) */
         .card-61 { border-color: #fef08a; background-color: #fefce8; }
         .card-61 .game-title { color: #d97706; }
         .card-61 .btn { background-color: #fbbf24; box-shadow: 0 4px 10px rgba(251, 191, 36, 0.4); }
@@ -138,6 +140,15 @@
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-15px); }
             60% { transform: translateY(-7px); }
+        }
+
+        /* จัดรูปแบบเครดิตด้านล่าง (แยกออกมาจาก HTML) */
+        .creator-credit {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 1rem;
+            width: 100%;
         }
     </style>
 </head>
@@ -196,12 +207,8 @@
         </div>
     </div>
 
-    <div class="creator-credit.creator-credit {
-    text-align: center;
-    margin-top: 20px;
-    color: #888;
-    font-size: 1rem;
-    width: 100%; }">
+    <!-- ย้าย CSS ของเครดิตไปไว้ด้านบน และจัดให้เป็นระเบียบ -->
+    <div class="creator-credit">
         Website & Games Created with 💖 by <strong>Phonnatcha-kku</strong>
     </div>
     
