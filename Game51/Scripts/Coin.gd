@@ -10,7 +10,6 @@ extends Area3D
 
 var time_passed = 0
 var is_in_range = false
-var is_collected: bool = false
 
 # Vector
 var initial_position := Vector3.ZERO
@@ -27,18 +26,8 @@ func _process(delta):
 	rotate_y(deg_to_rad(3))
 	
 	if is_in_range:
-		# สั่งเล่นแอนิเมชันย่อขนาดแค่ "ครั้งเดียว" เมื่อผู้เล่นเข้ามาในระยะ
-		if not is_collected:
-			is_collected = true
-			var tween = create_tween()
-			
-			# เปลี่ยนจาก Vector3.ZERO เป็น 0.001 เพื่อไม่ให้ Matrix Scale เป็น 0
-			tween.tween_property(self, "scale", Vector3(0.001, 0.001, 0.001), 0.4).set_ease(Tween.EASE_IN_OUT)
-			
-			# พอย่อขนาดเสร็จแล้ว ค่อยสั่งลบเหรียญทิ้ง
-			tween.tween_callback(queue_free)
-		
-		# ให้เหรียญลอยตาม Player ต่อไปในระหว่างที่กำลังหดตัว
+		var tween = create_tween()
+		tween.tween_property(self, "scale", Vector3.ZERO, 0.4).set_ease(Tween.EASE_IN_OUT)
 		follow_player(delta)
 	
 # Coin Hover Animation

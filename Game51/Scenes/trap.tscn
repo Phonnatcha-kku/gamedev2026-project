@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cdhab13tbcfnh"]
 
-[ext_resource type="Script" uid="uid://bmafvxioj88gq" path="res://Scripts/trap.gd" id="1_0juii"]
+[ext_resource type="Script" uid="uid://bmafvxioj88gq" path="res://Scenes/trap.gd" id="1_0juii"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_14cdr"]
 albedo_color = Color(0.98950714, 0.12551308, 1.92523e-07, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_htemk"]
 material = SubResource("StandardMaterial3D_14cdr")
-size = Vector3(0.5, 0.5, 7.5)
+size = Vector3(0.5, 0.5, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xb81p"]
 size = Vector3(0.5, 0.5, 5)
